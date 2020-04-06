@@ -26,3 +26,8 @@ nrow(iris)
 ```{r}
 plot(iris)
 ```
+
+# 自作関数
+```{r}
+my_nrow(iris)
+```
