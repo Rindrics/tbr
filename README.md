@@ -1,4 +1,5 @@
-# tracer_bullets
+# tbr
+TracerBulletR(tbr)
 
 資源評価のCI & CD化検討のための曳光弾リポジトリ
 

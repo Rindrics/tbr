@@ -1,0 +1,33 @@
+---
+title: "report"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{report}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tbr)
+```
+# 背景
+```{r}
+nrow(iris)
+```
+
+# 目的
+```{r}
+plot(iris)
+```
+
+# 自作関数
+```{r}
+my_nrow(iris)
+```

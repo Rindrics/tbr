@@ -1,0 +1,5 @@
+.github
+^LICENSE\.md$
+^README\.md$
+^cran-comments\.md$
+^tbr\.Rproj$
