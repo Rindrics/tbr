@@ -1,6 +1,5 @@
 # tbr
 TracerBulletR(tbr)
 
-資源評価のCI & CD化検討のための曳光弾リポジトリ
+A 'Trace-bulletting' repo for stock assessment
 
-![Hello, World!](https://github.com/akikirinrin/tracer_bullets/workflows/Hello,%20World!/badge.svg)
