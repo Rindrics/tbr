@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(tbr)
+data(dat)
+data(vpa_result)
 ```
 # 背景
 ```{r}
@@ -30,4 +32,18 @@ plot(iris)
 # 自作関数
 ```{r}
 my_nrow(iris)
+```
+
+# データ
+```{r}
+head(dat$caa) %>% knitr::kable()
+head(dat$waa) %>% knitr::kable()
+head(dat$maa) %>% knitr::kable()
+```
+
+# VPA
+```{r}
+years <- as.numeric(colnames(vpa_result$ssb))
+ssb   <- colSums(vpa_result$ssb, na.rm = TRUE)
+plot(years, ssb, type = "b")
 ```
