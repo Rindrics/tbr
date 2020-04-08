@@ -82,7 +82,9 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tbr</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tbr</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="no">dat</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="no">vpa_result</span>)</pre></body></html></div>
 <div id="背景" class="section level1">
 <h1 class="hasAnchor">
 <a href="#%E8%83%8C%E6%99%AF" class="anchor"></a>背景</h1>
@@ -100,6 +102,306 @@
 <a href="#%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0" class="anchor"></a>自作関数</h1>
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/my_nrow.html">my_nrow</a></span>(<span class="no">iris</span>)
 <span class="co">#&gt; [1] 149</span></pre></body></html></div>
+</div>
+<div id="データ" class="section level1">
+<h1 class="hasAnchor">
+<a href="#%E3%83%87%E3%83%BC%E3%82%BF" class="anchor"></a>データ</h1>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">dat</span>$<span class="no">caa</span>) <span class="kw">%&gt;%</span> <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>()</pre></body></html></div>
+<table class="table">
+<thead><tr class="header">
+<th></th>
+<th align="right">1991</th>
+<th align="right">1992</th>
+<th align="right">1993</th>
+<th align="right">1994</th>
+<th align="right">1995</th>
+<th align="right">1996</th>
+<th align="right">1997</th>
+<th align="right">1998</th>
+<th align="right">1999</th>
+<th align="right">2000</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td align="right">199.874276</td>
+<td align="right">216.596467</td>
+<td align="right">267.690569</td>
+<td align="right">218.698390</td>
+<td align="right">165.560323</td>
+<td align="right">249.248457</td>
+<td align="right">187.900693</td>
+<td align="right">130.286903</td>
+<td align="right">79.919603</td>
+<td align="right">77.111114</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td align="right">129.461781</td>
+<td align="right">121.415250</td>
+<td align="right">162.962634</td>
+<td align="right">158.666333</td>
+<td align="right">154.135672</td>
+<td align="right">95.753371</td>
+<td align="right">144.155191</td>
+<td align="right">91.394556</td>
+<td align="right">62.349381</td>
+<td align="right">36.748102</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td align="right">72.371953</td>
+<td align="right">71.295753</td>
+<td align="right">82.083224</td>
+<td align="right">85.462795</td>
+<td align="right">98.075615</td>
+<td align="right">76.984231</td>
+<td align="right">47.824747</td>
+<td align="right">61.086002</td>
+<td align="right">39.043640</td>
+<td align="right">26.225479</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td align="right">26.551166</td>
+<td align="right">32.795575</td>
+<td align="right">38.996562</td>
+<td align="right">33.760932</td>
+<td align="right">40.752142</td>
+<td align="right">36.627193</td>
+<td align="right">28.750432</td>
+<td align="right">15.405718</td>
+<td align="right">20.815364</td>
+<td align="right">13.749109</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td align="right">12.348034</td>
+<td align="right">11.520085</td>
+<td align="right">17.038147</td>
+<td align="right">15.187500</td>
+<td align="right">15.126147</td>
+<td align="right">14.250219</td>
+<td align="right">12.807806</td>
+<td align="right">8.738996</td>
+<td align="right">5.010798</td>
+<td align="right">7.076899</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td align="right">7.542134</td>
+<td align="right">5.548329</td>
+<td align="right">6.198051</td>
+<td align="right">6.927194</td>
+<td align="right">7.103546</td>
+<td align="right">5.564598</td>
+<td align="right">5.242363</td>
+<td align="right">4.095683</td>
+<td align="right">2.967300</td>
+<td align="right">1.764242</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">dat</span>$<span class="no">waa</span>) <span class="kw">%&gt;%</span> <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>()</pre></body></html></div>
+<table class="table">
+<thead><tr class="header">
+<th></th>
+<th align="right">1991</th>
+<th align="right">1992</th>
+<th align="right">1993</th>
+<th align="right">1994</th>
+<th align="right">1995</th>
+<th align="right">1996</th>
+<th align="right">1997</th>
+<th align="right">1998</th>
+<th align="right">1999</th>
+<th align="right">2000</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+<td align="right">0.0358325</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+<td align="right">0.1669847</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+<td align="right">0.3412475</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+<td align="right">0.5083673</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+<td align="right">0.6464623</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+<td align="right">0.7517888</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">dat</span>$<span class="no">maa</span>) <span class="kw">%&gt;%</span> <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>()</pre></body></html></div>
+<table class="table">
+<thead><tr class="header">
+<th></th>
+<th align="right">1991</th>
+<th align="right">1992</th>
+<th align="right">1993</th>
+<th align="right">1994</th>
+<th align="right">1995</th>
+<th align="right">1996</th>
+<th align="right">1997</th>
+<th align="right">1998</th>
+<th align="right">1999</th>
+<th align="right">2000</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+<td align="right">0.02</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+<td align="right">0.12</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+<td align="right">0.50</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+<td align="right">0.88</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+<td align="right">0.98</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="vpa" class="section level1">
+<h1 class="hasAnchor">
+<a href="#vpa" class="anchor"></a>VPA</h1>
+<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="no">years</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">vpa_result</span>$<span class="no">ssb</span>))
+<span class="no">ssb</span>   <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colSums.html">colSums</a></span>(<span class="no">vpa_result</span>$<span class="no">ssb</span>, <span class="kw">na.rm</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="no">years</span>, <span class="no">ssb</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"b"</span>)</pre></body></html></div>
+<p><img src="report_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
 </div>
   </div>
 
