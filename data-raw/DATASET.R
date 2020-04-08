@@ -13,3 +13,14 @@ dat <- frasyr::data.handler(caa   = caa,
                             index = index)
 
 usethis::use_data(dat, overwrite = TRUE)
+
+vpa_result <- dat %>%
+  frasyr::vpa(fc.year = 2015:2017,
+              tf.year = 2015:2016,
+              term.F = "max",
+              stat.tf = "mean",
+              Pope = TRUE,
+              tune = FALSE,
+              p.init = 0.5)
+
+usethis::use_data(vpa_result, overwrite = TRUE)
